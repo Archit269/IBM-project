@@ -1,0 +1,76 @@
+body, html {
+    background-color: black;
+    height: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+
+h2{
+    color: #eca300;
+    text-align: center;
+    
+}
+.accordion {
+    margin: 40px 0;
+}
+
+.item {
+    border: none;
+    margin-bottom: 50px;
+    background: none;
+}
+
+.t-p {
+    color: rgb(183, 156, 99);
+    padding: 40px 30px 0px 30px;
+}
+
+.btn.btn-link {
+    background: #333435;
+    color: white;
+    border-radius: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2.5;
+    text-decoration: none;
+}
+
+.item-header {
+    border-bottom: none;
+    background: transparent;
+    padding: 0px;
+    margin: 2px;
+}
+
+button {
+    color: rgb(232, 226, 226);
+    font-size: 20px;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.item i {
+    float: right;
+    font-size: 30px;
+    color: #eca300;
+    background-color: black;
+    width: 60px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.item button.btn.btn-link.collapsed i {
+    transform: rotate(0deg);
+}
+
+.item button.btn.btn-link i {
+    transform: rotate(180deg);
+    transition: transform 0.5s;
+}

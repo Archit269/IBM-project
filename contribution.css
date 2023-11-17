@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; 
+    padding: 0; 
+    margin: 0; 
+}
+
+body {
+    background: linear-gradient(290deg, #6B7B7A, #333837);
+}
+
+.accordion {
+    margin: 60px auto;
+    width: 1200px;
+    padding: 70px;
+    
+}
+
+.accordion li {
+    list-style: none;
+    margin: 0 0 20px 0;
+    width: 80%;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(rgb(107, 123, 122));
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(23, 18, 18, 0.7);
+    margin-right: 20px;
+    
+}
+
+/* ... (existing styles) ... */
+
+.accordion .accordion-panel {
+    color: #eaeeea;
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s, box-shadow 0.5s; /* Add box-shadow to the transition */
+    box-shadow: none; /* Initially set box-shadow to none */
+}
+
+.accordion input[type="checkbox"]:checked + label + .accordion-panel {
+    max-height: 400px;
+    padding: 10px 10px 20px;
+    box-shadow: inset 4px 0 0 orange; /* Add the desired inset box shadow */
+}
+
+/* ... (rest of your styles) ... */
+
+
+.accordion li:nth-child(2n) {
+    margin-right: 0;
+}
+
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+
+.accordion .accordion-panel {
+    color: #edece4;
+    
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+
+.accordion input[type="checkbox"] {
+    display: none;
+}
+
+.accordion input[type="checkbox"]:checked + label + .accordion-panel {
+    max-height: 400px;
+    padding: 10px 10px 20px;
+}
+
+.accordion input[type="checkbox"]:checked + label::after {
+    content: '-';
+}
+
+.accordion input[type="checkbox"] + label::after {
+    content: '+';
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.accordion-panel {
+    color: #555;
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}

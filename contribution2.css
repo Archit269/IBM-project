@@ -1,0 +1,28 @@
+body {
+    background: #232323;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.btn-link {
+    background: #333435;
+    color: white;
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.btn-link i {
+    float: right;
+    transition: transform 0.5s;
+}
+
+.btn-link.collapsed i {
+    transform: rotate(0deg);
+}
+
+.btn-link:not(.collapsed) i {
+    transform: rotate(180deg);
+}

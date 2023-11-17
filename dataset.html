@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset and Description</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,400|Sofia+Pro:300,400&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,300&family=Rubik:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:ital,wght@1,300&family=Rubik:ital,wght@1,500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(70deg, #6B7B7A, #333837);
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .heading {
+            position: relative;
+            color: #fff;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 300;
+            font-size: 90px;
+            text-align: center;
+            cursor: pointer;
+            margin-bottom: 20px;
+            position: absolute;
+            top: 10%;
+        }
+
+        .overlay-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50vh;
+            background-image: url('https://img.freepik.com/free-vector/dark-minimal-hexagons-background_79603-1455.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(50vh);
+            transition: opacity 0.3s ease, transform 0.5s ease;
+            z-index: 1;
+        }
+
+        .overlay-content {
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            padding: 20px;
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        /* Grey Bubble Button Animation */
+        .button {
+            background: grey;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .button::before {
+            content: "";
+            position: absolute;
+            background: grey; /* Initial grey color */
+            border-radius: 50%;
+            width: 0;
+            height: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s ease, height 0.3s ease;
+            z-index: -1;
+        }
+
+        .button:hover {
+            background: orange;
+            color: #fff;
+        }
+
+        .button:hover::before {
+            width: 120%; /* Increase width on hover */
+            height: 120%; /* Increase height on hover */
+            background: orange; /* Change color to orange on hover */
+        }
+
+        /* Scale Animation */
+        .button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">Dataset</div>
+        <div class="overlay-container" id="overlay-container">
+            <div class="overlay-content">
+                <h1>Description</h1>
+                Smart healthcare monitoring edge devices enable faster and comprehensive health treatment. They ensure timely emergency medical assistance and significantly enhance the quality and efficiency of emergency response. These IoT-based healthcare systems comprise various devices, sensors, and mobile nodes that collect and remotely store patient data. To access the dataset, click the button below.
+            </div>
+            <button class="button" id="btn" onclick="window.open('https://intranet.cb.amrita.edu/ibmrcds/', '_blank');">Click Here</button>
+        </div>
+    </div>
+
+    <script>
+        const overlayContainer = document.getElementById("overlay-container");
+
+        // Function to show the overlay when the cursor is anywhere on the screen
+        function showOverlay() {
+            overlayContainer.style.opacity = 1;
+            overlayContainer.style.transform = "translateY(0)";
+        }
+
+        // Add event listener to the document
+        document.addEventListener("mousemove", showOverlay);
+    </script>
+</body>
+</html>
