@@ -1,112 +1,87 @@
-* {
+body, html {
+    background-color: black;
+    height: 0px;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
 }
 
-html, body {
-    height: 100%; 
-    padding: 0; 
-    margin: 0; 
-}
 
-body {
-    background: linear-gradient(290deg, #6B7B7A, #333837);
+h2{
+    color: #eca300;
+    text-align: center;
+    
 }
-
 .accordion {
-    margin: 60px auto;
-    width: 1200px;
-    padding: 70px;
-    
+    margin: 40px 0;
 }
 
-.accordion li {
-    list-style: none;
-    margin: 0 0 20px 0;
-    width: 80%;
-    padding: 10px;
-    border-radius: 8px;
-    background: rgba(rgb(107, 123, 122));
-    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-                -6px -6px 10px -1px rgba(23, 18, 18, 0.7);
-    margin-right: 20px;
-    
+.item {
+    border: none;
+    margin-bottom: 50px;
+    background: none;
 }
 
-/* ... (existing styles) ... */
-
-.accordion .accordion-panel {
-    color: #eaeeea;
-    padding: 0 10px;
-    line-height: 26px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s, padding 0.5s, box-shadow 0.5s; /* Add box-shadow to the transition */
-    box-shadow: none; /* Initially set box-shadow to none */
+.t-p {
+    color: rgb(183, 156, 99);
+    padding: 40px 30px 0px 30px;
 }
 
-.accordion input[type="checkbox"]:checked + label + .accordion-panel {
-    max-height: 400px;
-    padding: 10px 10px 20px;
-    box-shadow: inset 4px 0 0 orange; /* Add the desired inset box shadow */
+.btn.btn-link {
+    background: #333435;
+    color: white;
+    border-radius: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2.5;
+    text-decoration: none;
 }
 
-/* ... (rest of your styles) ... */
-
-
-.accordion li:nth-child(2n) {
-    margin-right: 0;
+.item-header {
+    border-bottom: none;
+    background: transparent;
+    padding: 0px;
+    margin: 2px;
 }
 
-.accordion li label {
+button {
+    color: rgb(232, 226, 226);
+    font-size: 20px;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.item i {
+    float: right;
+    font-size: 30px;
+    color: #eca300;
+    background-color: black;
+    width: 60px;
+    height: 40px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 10px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
+    border-radius: 5px;
 }
 
-
-
-.accordion .accordion-panel {
-    color: #edece4;
-    
-    padding: 0 10px;
-    line-height: 26px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s, padding 0.5s;
+.item button.btn.btn-link.collapsed i {
+    transform: rotate(0deg);
 }
 
-
-.accordion input[type="checkbox"] {
-    display: none;
+.item button.btn.btn-link i {
+    transform: rotate(180deg);
+    transition: transform 0.5s;
 }
 
-.accordion input[type="checkbox"]:checked + label + .accordion-panel {
-    max-height: 400px;
-    padding: 10px 10px 20px;
+/* Your existing CSS styles go here */
+
+/* Add any additional styling for the columns if needed */
+.row {
+    margin-top: 20px; /* Adjust as needed */
 }
 
-.accordion input[type="checkbox"]:checked + label::after {
-    content: '-';
-}
-
-.accordion input[type="checkbox"] + label::after {
-    content: '+';
-    margin-right: 10px;
-    font-size: 24px;
-    font-weight: 600;
-}
-
-.accordion-panel {
-    color: #555;
-    padding: 0 10px;
-    line-height: 26px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s, padding 0.5s;
+.col-md-4 {
+    padding: 0 15px; /* Add some spacing between columns */
 }
