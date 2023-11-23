@@ -66,11 +66,5 @@ button {
     border-radius: 5px;
 }
 
-.item button.btn.btn-link.collapsed i {
-    transform: rotate(0deg);
-}
 
-.item button.btn.btn-link i {
-    transform: rotate(180deg);
-    transition: transform 0.5s;
-}
+
