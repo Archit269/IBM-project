@@ -456,12 +456,59 @@ body {
 .contribution{
     padding-top: 10px;
     margin-top: 20px;
+    background-color:#495352;
 }
 
-.contribution .heading{
+
+.contribution .heading {
     margin-top: -100px;
+    color: orange; /* Add your desired text color */
+    font-size: 24px; /* Add your desired font size */
     
 }
+
+.btn.btn-link {
+    background: #333435;
+    color: white;
+    border-radius: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2.5;
+    text-decoration: none;
+}
+
+button {
+    color: rgb(232, 226, 226);
+    font-size: 20px;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+
+.item i {
+    float: right;
+    font-size: 30px;
+    color: #eca300;
+    background-color: black;
+    width: 60px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.item-header {
+    border-bottom: none;
+    background: transparent;
+    padding: 0px;
+    margin: 10px;
+}
+
+
 .dataset{
     padding-top: 25px;
 }

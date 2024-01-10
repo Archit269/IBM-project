@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="contribution3.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-MC4V2LZxOzSTAtFwEnPCw2w1L+6BR0i2UgyXvhK1aQ7pUlnJL/00Av02I5fuDmCX" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -547,6 +551,37 @@
                 </div>
               </div>
             </div>
+            <style>
+               .item .collapse {
+                 display: none;
+                 transition: height 0.3s ease; 
+               }
+           
+               .item:hover .collapse {
+                 display: block !important;
+               }
+           
+               .item button i {
+                 transition: transform 0.3s ease; 
+               }
+           
+               .item:hover button i {
+                 transform: rotate(180deg);
+               }
+             </style>
+           
+             <script>
+               $(document).ready(function(){
+                 $(".item").hover(
+                   function() {
+                     $(this).find('.collapse').collapse('show');
+                   },
+                   function() {
+                     $(this).find('.collapse').collapse('hide');
+                   }
+                 );
+               });
+             </script>
     </section>
    
     <section class="feed" id="feedback">
